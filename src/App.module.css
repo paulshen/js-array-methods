@@ -1,0 +1,48 @@
+.root {
+  padding: 64px;
+}
+
+.container {
+  position: relative;
+  height: 256px;
+}
+
+.cell {
+  background-color: #e7ae58;
+  border-radius: 4px;
+  display: flex;
+  font-size: 12px;
+  font-family: 'SF Mono';
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.indexArgument {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-family: 'SF Mono';
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  font-family: 'SF Mono';
+}
+
+.smallText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  font-family: 'SF Mono';
+  color: #808080;
+}
