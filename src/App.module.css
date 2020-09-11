@@ -1,5 +1,5 @@
 .root {
-  padding: 64px;
+  padding: 128px;
 }
 
 .container {
@@ -8,7 +8,6 @@
 }
 
 .cell {
-  background-color: #e7ae58;
   border-radius: 4px;
   display: flex;
   font-size: 12px;

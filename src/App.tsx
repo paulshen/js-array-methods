@@ -20,7 +20,7 @@ function Cell({
   return (
     <motion.div
       animate={{ x, y, backgroundColor: color, opacity: 1 }}
-      initial={{ opacity: 0, x, y: 16 }}
+      initial={{ opacity: 0, x, y: 16, backgroundColor: color }}
       transition={TRANSITION}
       className={styles.cell}
     >
@@ -57,18 +57,40 @@ function App({}: AppProps) {
           <motion.div
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            style={{ x: 256 + 2 * (32 + 12), y: 76 }}
+            style={{ x: 192 + 2 * (32 + 12), y: 76 }}
             className={styles.smallText}
           >
             return value
           </motion.div>
         ) : null}
+        <AnimatePresence>
+          {stage === Stage.ArgReady
+            ? new Array(5).fill(undefined).map((_, i) => (
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  style={{
+                    x: 11 + i * (32 + 12),
+                    y: 70,
+                    position: 'absolute',
+                    color: '#e0e0e0',
+                    top: 0,
+                    left: 0,
+                  }}
+                  exit={{ opacity: 0 }}
+                  key={i}
+                >
+                  {i}
+                </motion.div>
+              ))
+            : null}
+        </AnimatePresence>
         {stage >= Stage.Args
           ? new Array(5).fill(undefined).map((_, i) => (
               <Cell
-                x={(stage >= Stage.Apply && i >= 2 ? 256 : 0) + i * (32 + 12)}
+                x={(stage >= Stage.Apply && i >= 2 ? 192 : 0) + i * (32 + 12)}
                 y={stage >= Stage.ArgReady ? 96 : 32}
-                color={stage >= Stage.Apply && i >= 2 ? '#CA96F3' : '#e7ae58'}
+                color={stage >= Stage.Apply && i >= 2 ? '#CA96F3' : '#ffc163'}
                 key={i}
               >
                 {String.fromCharCode('A'.charCodeAt(0) + i)}
