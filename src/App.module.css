@@ -21,7 +21,12 @@
   left: 0;
 }
 
+.argument {
+  color: #29a7c3;
+}
+
 .indexArgument {
+  color: #29a7c3;
   position: absolute;
   top: 0;
   left: 0;
@@ -44,4 +49,13 @@
   font-size: 12px;
   font-family: 'SF Mono';
   color: #808080;
+}
+
+.length {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  border: 1px solid #29a7c380;
+  border-width: 1px 1px 0;
 }
