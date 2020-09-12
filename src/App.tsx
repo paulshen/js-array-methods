@@ -249,7 +249,7 @@ function App2({}: AppProps) {
               <Cell
                 x={(stage >= Stage.Apply ? 312 : 0) + (2 + i) * (32 + 12)}
                 y={stage >= Stage.ArgReady ? 96 : 32}
-                color={stage >= Stage.ArgReady2 ? '#CA96F3' : '#ffc163'}
+                color={stage >= Stage.ArgReady2 ? '#f38fab' : '#ffc163'}
                 key={2 + i}
               >
                 {String.fromCharCode('A'.charCodeAt(0) + (2 + i))}
